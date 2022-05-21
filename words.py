@@ -3,6 +3,15 @@
 
 def print_upper_words(words,must_start_with={}):
 
+    """ 
+    This function accepts a list of words and a set of letters (default to empty set if no letters provided)
+
+    If no letters are provided, it will print each word out on a separate line in all caps
+
+    If a set of letters is provided, it will only print the words that start with that letter (not case sensitive)
+    
+    """
+
     if must_start_with:
         
         for word in words:
@@ -17,8 +26,3 @@ def print_upper_words(words,must_start_with={}):
             print(word.upper())
 
 
-
-# this should print "HELLO", "HEY", "YO", and "YES"
-
-print_upper_words(["hello", "hey", "goodbye", "yo", "yes"],
-                   must_start_with={"h", "y"})
